@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!--Making a menu for portrait mode-->
+    <div id="menu"><img src="BurgerMenu.png" alt="menu"></div>
+    <div id="menuPopup">
+        <ul id="popupList">
+            <li class="navEl"><a href="#homeDiv">Home</a></li>
+            <li class="navEl"><a href="#aboutMe">About me</a></li>
+            <li class="navEl"><a href="#projects">My projects</a></li>
+        </ul>
+    </div>
+    <div id="overlay"></div>
+
+    <div id="navbar">
+        <ul class="navList">
+            <li class="navEl"><a href="#homeDiv">Home</a></li>
+            <li class="navEl"><a href="#aboutMe">About me</a></li>
+            <li class="navEl"><a href="#projects">My projects</a></li>
+        </ul>
+    </div>
+
+    <div class="wrapper">
+        <!-- home section -->
+        <div id="homeDiv">
+            <h1>Brede's portifolio</h1>
+        </div>
+        <!-- about me section -->
+        <div id="aboutMe">
+            <div class="textBox" id="text1">
+                <h3>Dette er Brede</h3>
+                <p>Brede er en person som har en lidenskap for både koding og håndball. Han finner glede i å utforske ulike programmeringsprosjekter samtidig som han nyter spenningen og teamworket i håndballspillet. Med en interesse for både teknologi og idrett, balanserer Brede mellom de virtuelle kodene og den fysiske aktiviteten på banen, og finner glede i begge deler.</p><br>
+                <a href="merOmMeg.html">Les Mer</a>
+            </div>
+            <div class="textBox" id="text2">
+                <h3>Statistikk</h3>
+                <ul class="stats">
+                    <li id="Styrke">Styrke</li>
+                    <li id="Intelligens">Intelligens</li>
+                    <li id="Samarbeidsvillig">Samarbeidsvillig</li>
+                    <li id="Utholdenhet">Utholdenhet</li>
+                </ul>
+            </div>
+        </div>
+        <!-- projects section -->
+        <div id="projects">
+            <div id="projectContainer">
+                <div id="napoleon" class="slides transition">
+                    <a href="/Chapter2/2F/Kule_ting.html" class="projectLink">
+                        <img class="projectImg" src="/Chapter2/2F/Bilder_og_audio/TransparentNapoleon.webp" alt="Napoleon">
+                        <div class="linkName">Napoleon</div>
+                    </a>
+                </div>
+                <div id="Moneymaker" class="slides transition">
+                    <a href="/Chapter3/3D/egenSide.html" class="projectLink">
+                        <img class="projectImg" src="/Chapter3/3D/Bilder/dollar.png" alt="Dollarzz">
+                        <div class="linkName">Moneymaker</div>
+                    </a>
+                </div>
+                <div id="WishList" class="slides transition">
+                    <a href="/Chapter4/List/wishList.html" class="projectLink">
+                        <img class="projectImg" src="santa-icon.webp" alt="Christmas">
+                        <div class="linkName">WishList</div>
+                    </a>
+                </div>
+                <!-- buttons/dots to show wich slide -->
+                <div style="text-align:center">
+                    <span class="dot" id="btnOne" onclick="currentSlide(1)"></span>
+                    <span class="dot" id="btnTwo" onclick="currentSlide(2)"></span>
+                    <span class="dot" id="btnThree" onclick="currentSlide(3)"></span>
+                </div>
+                <!-- buttons for next and previous slides -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+        <footer>
+            <div class="footerContent">
+                <div class="footerOne">
+                    <ul class="footerlist">
+                        <a class="FOLink" href="https://www.instagram.com/bredeklokkerud/"><li><img src="Instagram.png" alt="instagram"></li></a>
+                        <a class="FOlink" href="https://www.facebook.com/"><li><img src="facebook.png" alt="facebook"></li></a>
+                        <a class="FOlink" href="https://github.com/"><li><img src="github.png" alt="github"></li></a>
+                        <a class="FOlink" href="https://www.youtube.com/watch?v=VDCnJHyMuyU"><li><img src="youtube.png" alt="youtube"></li></a>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="footerTwo">
+                        <a href="/Chapter2/2F/Geekin.html"><li>contact me</li></a>
+                        <a href="/Chapter2/2F/iFreeze.html"><li>More</li></a>
+                        <a href="/Chapter2/2F/Phrog.html"><li>Picture of Me</li></a>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    Copyright &copy;2024 Brede Klokkerud Hella - All rights reserved
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+<script src="index.js"></script>
+</html>
