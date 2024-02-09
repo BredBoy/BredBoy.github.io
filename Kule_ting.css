@@ -1,0 +1,266 @@
+*{
+    transition: 0.5s;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: gray;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    background-color: beige;
+    height: 100px;
+}
+.navImg>img{
+    height: 60px;
+    aspect-ratio: 468/630;
+    padding: 1em;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    list-style-type: none;
+    gap: 2em;
+    margin: 0;
+    padding: 0.5em;
+}
+nav ul a{
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 1em 0.5em ;
+    max-width: 5em;
+    width: 5em;
+    text-align: center;
+}
+nav ul a:hover{
+    background-color: #444;
+    color: #eee;
+    font-weight: bold;
+}
+.wrapper{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    height: 100vh;
+    grid-template-areas: 
+    "T1 HE T2"
+    "T1 HE T2"
+    "T1 MA T2"
+    "T1 fight fight"
+    "T1 BO BO"
+    "T1 S1 S2"
+    "T1 S3 S4"
+    "T1 FO FO"
+    "T1 FO FO";
+}
+.wars{
+    display: flex;
+    background-color: #eee;
+    border-radius: 10px;
+    flex-direction: column;
+    margin: 5px 0px;
+    padding: 1em;
+    padding-bottom: 4em;
+    height: fit-content;
+    .url {cursor: url(./Bilder_og_audio/TransparentNapoleon.webp),auto;}
+    animation: wideback 0.5s forwards;
+}
+.wars:hover{
+    animation: wide 0.5s forwards;
+}
+@keyframes wide {
+    0%{
+        width: 100%;
+        height: 220px;
+        font-size: 1.2em;
+    }
+    100%{
+        width: 120%;
+        height: 300px;
+        font-size: 1.2em;
+    }
+}
+@keyframes wideback {
+    0%{
+        width: 120%;
+        height: 300px;
+        font-size: 1em;
+    }
+    100%{  
+        width: 100%;
+        height: 220px;
+        font-size: 1em;
+    }
+}
+#header_NW{
+    margin: auto;
+}
+
+header{
+    grid-area: HE;
+    background-image: url(./Bilder_og_audio/napoleon-exile-gettyimages-1288489073.jpg);
+    background-size: cover;
+    font-size: 2em;
+    padding: 0.5em;
+    text-align: center;
+    text-shadow: 2px 1px #606060;
+    margin-left: 0.5em;
+    height: 300px;
+}
+#ting1{
+    grid-area: T1;
+    margin: 1em;
+}
+
+#ting2{
+    grid-area: T2;
+}
+main{
+    grid-area: MA;
+    background-image: url(./Bilder_og_audio/735155-f-hpr.jpg);
+    background-size: cover;
+    margin-left: 1em;
+    height: 150px;
+}
+footer{
+    grid-area: FO;
+}
+.audio{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+table, td{
+    border: 2px solid #222222;
+    border-collapse: collapse;
+    padding: 3px;
+}
+thead{
+    font-weight: bold;
+}
+.farget{
+    background-color: red;
+}
+table{
+    font-size: 1.5em;
+    margin: 10px auto;
+}
+.Fight{
+    display: flex;
+    margin: 5em;
+    grid-area: fight;
+    justify-content: space-between;
+    pointer-events: all;
+}
+.napoleon{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+#Minigun{
+    width: 170px;
+    aspect-ratio: 1280/413;
+}
+button{
+    width: fit-content;
+    margin: 2em;
+    grid-area: BO;
+}
+.Army{
+    width: 100%;
+    height: 100%;
+}
+#Napoleon_Fight{
+    height: 100px;
+    float: right;
+}
+#Army_Fight{
+    height: 100px;
+    float: right;
+}
+.audio:hover + #Army_Fight{
+    animation: Fight1 2s forwards;
+}
+@keyframes Fight1 {
+    0%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translateX(-100px);
+    }
+}
+
+.sitat{
+    border-radius: 15px;
+    margin: 0.5em;
+    padding: 0.5em;
+    height: fit-content;
+    align-items: center;
+    width: fit-content;
+    font-size: 2em;
+}
+
+#sitat1{
+    grid-area: S1;
+    background-color: #a3b18a;
+    border-left: 15px solid #588157;
+}
+#sitat2{
+    grid-area: S2;
+    background-color: #fca311;
+    border-left: 15px solid #fb8500;
+}
+#sitat3{
+    grid-area: S3;
+    background-color: #3e5c76;
+    border-left: 15px solid #1d2d44;
+}
+#sitat4{
+    grid-area: S4;
+    background-color: #e5383b;
+    border-left: 15px solid #ba181b;
+}
+footer{
+    grid-area: FO;
+    background-image: url(./Bilder_og_audio/Nyhed-13-napoleon-lead.jpg);
+    height: 600px;
+    aspect-ratio: 2200/1523;
+    background-size: cover;
+    margin: 3em auto 0px;
+}
+@media (orientation:portrait){
+    .wars{
+        min-height: 600px;
+    }
+    table{
+        width: 400px;
+        font-size: 1.3em;
+    }
+    .wrapper{
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+    #Army_Fight{
+        left: 250px;
+    }
+    .sitatwrapper{
+        display: flex;
+        flex-direction: column;
+        width: 200%;
+    }
+    header{
+        height: 150px;
+    }
+    nav{
+        width: 245vw;
+    }
+}
